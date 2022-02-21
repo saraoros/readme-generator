@@ -3,8 +3,8 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  // if (!licenseType.license) {
-  //   licenseType.license = [];
+  // if (!license) {
+  //   license = '';
   // }
 
   //if there's no license
@@ -39,9 +39,8 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   //add the license copyright & laws in if/ else statements similar to renderLicenseBadge
-
-  if (!licenseType.license) {
-    licenseType.license = [];
+  if (!license) {
+    license = '';
   }
 }
 
@@ -60,8 +59,12 @@ ${renderLicenseBadge(data.license)}
   # Technologies Used
   - ${data.languages}
 
+
   # Link to Repository
-  ##<a href="https://github.com/${data.github}">Github</a>
+  - <a href="https://github.com/${data.github}">Github Repository</a>
+
+  # Questions
+  - ${data.questions}
 
   # License
   ### ${renderLicenseSection(data.license)}
@@ -69,28 +72,6 @@ ${renderLicenseBadge(data.license)}
 `;
 }
 
-module.exports = (generatePage) => {
-  console.log(generatePage);
-  return `
-   # ${title}
-
-   # Description
-   - ${descriptionInput}
-
-   # Installation
-   - ${installInput}
-
-   # Technologies Used
-   - ${languages}
-
-   # Link to Repository
-   ##<a href="https://github.com/${github}">Github</a>
-
-   # License
-   ### ${license}
-
- `;
-};
 
 module.exports = generateMarkdown;
 

@@ -1,4 +1,3 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generatePage = require('./src/generateMarkdown');
@@ -72,78 +71,43 @@ Let's Get Started With a Few Questions:
               }
             }
           },
-          // {
-          //   // I made this question in hopes of capturing the repo name to insert it into the badge img link for the license
-          //   type: 'input',
-          //   name: 'repo',
-          //   message: 'Enter your projects repository name: (Required)',
-          //   validate: repoName => {
-          //     if (repoName) {
-          //       return true;
-          //     } else {
-          //       console.log('You need to enter your projects repository name!');
-          //       return false;
-          //     }
-          //   }
-          // },
           {
-            type: 'confirm',
-            name: 'confirmLicense',
-            message: 'Does your project have a license?',
-            default: false
-          },     
+            type: 'input',
+            name: 'questions',
+            message: 'Please enter your email address: (Required)',
+            validate: email => {
+              if (email) {
+                return true;
+              } else {
+                console.log('You need to enter an email address!');
+                return false;
+              }
+            }
+          },
+          {
+            type: 'checkbox',
+            name: 'license',
+            message: 'Choose a license for your application:',
+            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense' ]
+          }, 
     ])
     .then(licenseData => {
-      //license.push(licenseData);
       console.log(licenseData)
-      if (licenseData.confirmLicense) {
-        return licenseQuestions();
-      } else {
-        console.log('No License was added to your README.')
-      }
-fs.writeFile('./README.md', generatePage(licenseData), err => {
+fs.writeFile('./dist/README.md', generatePage(licenseData), err => {
   if (err) throw err;
 
-  console.log('README created!');
+  console.log('====== Your README has been created!======');
 });
-
     });
 
 };
 
-
-// If user answer 'y' to having a license, licenseQuestions function will be called.
-const licenseQuestions = licenseType => {
-
-  // If there's no license array property, create one
-  if (!licenseType.license) {
-    licenseType.license = [];
-  }
-
-  return inquirer
-    .prompt([
-      {
-        type: 'checkbox',
-        name: 'license',
-        message: 'Choose a license for your application:',
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense' ]
-      },
-    
-    ])
-};
-
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {}
 
 // Function call to initialize app
 init();
-
-
-
 
 
 
@@ -168,20 +132,3 @@ init();
   // .catch(err => {
   //   console.log(err);
   // });
-
-
-
-
-
-
-  // ** Questions: ***
-
- /* WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under */
-
-
-// what is the best way to add badges to the licenses? Should I make if/else statements with them?
-
-// Do I need 3 JS files? Or do I need to make a readme file for the deployed input.
-
-//
