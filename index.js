@@ -1,9 +1,20 @@
 // TODO: Include packages needed for this application
-const fs = require('fs');
-//const generatePage = require('./src/readme-template.js');
 const inquirer = require('inquirer');
-const projectDataArgs = process.argv.slice(2);
-const { writeFile, copyFile } = require('./src/readme-template');
+
+// const fs = require('fs');
+// const generatePage = require('./src/readme-template');
+
+//const readMePage = generatePage(title, github);
+
+// fs.writeFile('./README.md', readMePage, err => {
+//   if (err) throw err;
+
+//   console.log('README created!');
+// });
+
+
+
+//const { writeFile, copyFile } = require('./src/readme-template');
 //const { title } = require('process');
 
 
@@ -20,8 +31,8 @@ const questions = () => {
             type: 'input',
             name: 'title',
             message: 'What is the title of your project? (Required)',
-            validate: titleInput => {
-                if (titleInput) {
+            validate: title => {
+                if (title) {
                     return true;
                 } else {
                     console.log('Please enter the title of your project.');
@@ -110,66 +121,41 @@ init();
 
 
 
-const generatePage = (title, github) => {
-  return `
-    # ${title}
-
-    # Description
-    - ${descriptionInput}
-
-    # Installation
-    - ${installInput}
-
-    # Technologies Used
-    - ${languages}
-
-    # Link to Repository
-    ##<a href="https://github.com/${github}">Github</a>
-
-    # License
-    ### ${license}
-
-  `;
-};
-
-
-fs.writeFile('README.md', generatePage(title, github), err => {
-  if (err) throw err;
-
-  console.log('README created!');
-});
-
-
 
 
 
 // got this section from portfolio generator, still needs to be modified!
-questions()
-  .then(titleInput => {
-    return generatePage(titleInput);
-  })
-  .then(readMePage => {
-    return writeFile(readMePage);
-  })
-  .then(writeFileResponse => {
-    console.log(writeFileResponse);
-    return copyFile();
-  })
-  .then(copyFileResponse => {
-    console.log(copyFileResponse);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+ questions()
+ .then(answers => console.log(answers));
+  //  .then(title => {
+  //    return generatePage(title);
+  //  })
+  //  .then(readMePage => {
+  //   return writeFile(readMePage);
+  //  })
+  // .then(writeFileResponse => {
+  //   console.log(writeFileResponse);
+  //   return copyFile();
+  // })
+  // .then(copyFileResponse => {
+  //   console.log(copyFileResponse);
+  // })
+  // .catch(err => {
+  //   console.log(err);
+  // });
 
 
+
+
+
+  
   // ** Questions: ***
 
  /* WHEN I choose a license for my application from a list of options
 THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under */
 
 
-// How can I add badges to MIT licenses? SHould I make if else statements with them?
+// what is the best way to add badges to the licenses? Should I make if/else statements with them?
 
 // Do I need 3 JS files? Or do I need to make a readme file for the deployed input.
 
