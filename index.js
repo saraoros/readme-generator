@@ -1,29 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-
-// const fs = require('fs');
-// const generatePage = require('./src/readme-template');
-
-//const readMePage = generatePage(title, github);
-
-// fs.writeFile('./README.md', readMePage, err => {
-//   if (err) throw err;
-
-//   console.log('README created!');
-// });
+const fs = require('fs');
+const generatePage = require('./src/generateMarkdown');
 
 
-
-//const { writeFile, copyFile } = require('./src/readme-template');
-//const { title } = require('process');
-
-
-
-
-
-
-
-// TODO: Create an array of questions for user input
+// Start of questions for user input
 const questions = () => {
 console.log(`
 ========================================
@@ -91,20 +72,20 @@ Let's Get Started With a Few Questions:
               }
             }
           },
-          {
-            // I made this question in hopes of capturing the repo name to insert it into the badge img link for the license
-            type: 'input',
-            name: 'github',
-            message: 'Enter your projects repository name: (Required)',
-            validate: repoName => {
-              if (repoName) {
-                return true;
-              } else {
-                console.log('You need to enter your projects repository name!');
-                return false;
-              }
-            }
-          },
+          // {
+          //   // I made this question in hopes of capturing the repo name to insert it into the badge img link for the license
+          //   type: 'input',
+          //   name: 'repo',
+          //   message: 'Enter your projects repository name: (Required)',
+          //   validate: repoName => {
+          //     if (repoName) {
+          //       return true;
+          //     } else {
+          //       console.log('You need to enter your projects repository name!');
+          //       return false;
+          //     }
+          //   }
+          // },
           {
             type: 'confirm',
             name: 'confirmLicense',
@@ -114,22 +95,27 @@ Let's Get Started With a Few Questions:
     ])
     .then(licenseData => {
       //license.push(licenseData);
+      console.log(licenseData)
       if (licenseData.confirmLicense) {
         return licenseQuestions();
       } else {
         console.log('No License was added to your README.')
       }
+fs.writeFile('./README.md', generatePage(licenseData), err => {
+  if (err) throw err;
+
+  console.log('README created!');
+});
+
     });
 
-
-
 };
+
 
 // If user answer 'y' to having a license, licenseQuestions function will be called.
 const licenseQuestions = licenseType => {
 
-
-  // If there's no 'projects' array property, create one
+  // If there's no license array property, create one
   if (!licenseType.license) {
     licenseType.license = [];
   }
@@ -137,7 +123,6 @@ const licenseQuestions = licenseType => {
   return inquirer
     .prompt([
       {
-          // should I list all licenses' available or only a few? Most popular?
         type: 'checkbox',
         name: 'license',
         message: 'Choose a license for your application:',
@@ -146,13 +131,6 @@ const licenseQuestions = licenseType => {
     
     ])
 };
-
-
-
-
-
-
-
 
 
 // TODO: Create a function to write README file
