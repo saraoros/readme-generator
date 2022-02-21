@@ -25,6 +25,12 @@ const inquirer = require('inquirer');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
+console.log(`
+========================================
+Let's Get Started With a Few Questions:
+========================================
+`)
+
     return inquirer
     .prompt([
         {
@@ -73,41 +79,81 @@ const questions = () => {
             choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node', 'Other']
           },
           {
-            // this needs to be modified to the name of you github instead
             type: 'input',
             name: 'github',
-            message: 'Enter the GitHub link to your project. (Required)',
-            validate: linkInput => {
-              if (linkInput) {
+            message: 'Enter your GitHub username: (Required)',
+            validate: username => {
+              if (username) {
                 return true;
               } else {
-                console.log('You need to enter a project GitHub link!');
+                console.log('You need to enter your GitHub username!');
                 return false;
               }
             }
           },
           {
-              // should I list all licenses' available or only a few? Most popular?
-            type: 'checkbox',
-            name: 'license',
-            message: 'Choose a license for your application:',
-            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense' ]
+            // I made this question in hopes of capturing the repo name to insert it into the badge img link for the license
+            type: 'input',
+            name: 'github',
+            message: 'Enter your projects repository name: (Required)',
+            validate: repoName => {
+              if (repoName) {
+                return true;
+              } else {
+                console.log('You need to enter your projects repository name!');
+                return false;
+              }
+            }
           },
-          
+          {
+            type: 'confirm',
+            name: 'confirmLicense',
+            message: 'Does your project have a license?',
+            default: false
+          },     
     ])
-    // the following block is from module 9: needs to be modified
-    // .then(projectData => {
-    //   portfolioData.projects.push(projectData);
-    //   if (projectData.confirmAddProject) {
-    //     return promptProject(portfolioData);
-    //   } else {
-    //     return portfolioData;
-    //   }
-    // });
+    .then(licenseData => {
+      //license.push(licenseData);
+      if (licenseData.confirmLicense) {
+        return licenseQuestions();
+      } else {
+        console.log('No License was added to your README.')
+      }
+    });
 
 
 
 };
+
+// If user answer 'y' to having a license, licenseQuestions function will be called.
+const licenseQuestions = licenseType => {
+
+
+  // If there's no 'projects' array property, create one
+  if (!licenseType.license) {
+    licenseType.license = [];
+  }
+
+  return inquirer
+    .prompt([
+      {
+          // should I list all licenses' available or only a few? Most popular?
+        type: 'checkbox',
+        name: 'license',
+        message: 'Choose a license for your application:',
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense' ]
+      },
+    
+    ])
+};
+
+
+
+
+
+
+
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
@@ -127,6 +173,7 @@ init();
 // got this section from portfolio generator, still needs to be modified!
  questions()
  .then(answers => console.log(answers));
+ 
   //  .then(title => {
   //    return generatePage(title);
   //  })
@@ -148,7 +195,7 @@ init();
 
 
 
-  
+
   // ** Questions: ***
 
  /* WHEN I choose a license for my application from a list of options
