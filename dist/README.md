@@ -1,6 +1,6 @@
 
-  # fgdfg
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+  # fdgdsfg
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
 # Table of Contents
 
@@ -12,21 +12,23 @@
 - [License](#license)
 
   # Description
-  - gdfg
+  - fgdf
 
   # Installation
-  - dfgd
+  - fdgd
 
   # Technologies
   - JavaScript
 
 
   # Repository
-  - <a href="https://github.com/fgdf">Github Repository</a>
+  - <a href="https://github.com/fdgd">Github Repository</a>
 
   # Questions
   - fgdf
 
   # License
-  Copyright (C) 2022 ${data.github} This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+  Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/> 
+    
+    Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below.
   
