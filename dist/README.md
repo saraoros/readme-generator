@@ -1,6 +1,6 @@
 
-  # fdgdsfg
-[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+  # README Generator
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Table of Contents
 
@@ -12,23 +12,27 @@
 - [License](#license)
 
   # Description
-  - fgdf
+  - The goal of this project is to create a README generator to help developers create a professional README for a new project.
 
   # Installation
-  - fdgd
+  - In order to use this README generator, please be sure to have Node.js installed on your machine. If it is not already installed, you can download Node.js through their webpage: https://nodejs.org/en/download/
 
   # Technologies
-  - JavaScript
+  - JavaScript,ES6,Node
 
 
   # Repository
-  - <a href="https://github.com/fdgd">Github Repository</a>
+  - <a href="https://github.com/saraoros">Github Repository</a>
 
   # Questions
-  - fgdf
+  - saragochez13@gmail.com
 
   # License
-  Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/> 
+  Copyright © 2022
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
     
-    Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below.
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   
