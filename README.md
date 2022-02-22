@@ -13,8 +13,19 @@
 
   # Description
   - The goal of this project is to create a README generator to help developers create a professional README for a new project.
- ## Live Video Demonstration
 
+
+ ### Live Video Demonstration
+
+[Walk-through Video Link Here!](https://drive.google.com/file/d/14_SnC32F1lyfOvvJlCaK6nfIIuiWcGLm/view)
+
+<br />
+
+### Screenshots of Sample Questions and Sample README
+  <img src="./develop/images/LiveDemoSampleRead.png">
+
+  <br />
+  
   <img src="./develop/images/sampleREADME.png" />
 
   # Installation
