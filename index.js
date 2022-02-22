@@ -103,32 +103,7 @@ fs.writeFile('./dist/README.md', generatePage(licenseData), err => {
 };
 
 
-// TODO: Create a function to initialize app
-function init() {}
 
-// Function call to initialize app
-init();
-
-
-
-
-// got this section from portfolio generator, still needs to be modified!
  questions()
  .then(answers => console.log(answers));
  
-  //  .then(title => {
-  //    return generatePage(title);
-  //  })
-  //  .then(readMePage => {
-  //   return writeFile(readMePage);
-  //  })
-  // .then(writeFileResponse => {
-  //   console.log(writeFileResponse);
-  //   return copyFile();
-  // })
-  // .then(copyFileResponse => {
-  //   console.log(copyFileResponse);
-  // })
-  // .catch(err => {
-  //   console.log(err);
-  // });

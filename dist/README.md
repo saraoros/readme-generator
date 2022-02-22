@@ -1,5 +1,5 @@
 
-  # README Generator
+  # sara's awesome project
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Table of Contents
@@ -12,10 +12,10 @@
 - [License](#license)
 
   # Description
-  - The goal of this project is to create a README generator to help developers create a professional README for a new project.
+  - I created this project for fun!
 
   # Installation
-  - In order to use this README generator, please be sure to have Node.js installed on your machine. If it is not already installed, you can download Node.js through their webpage: https://nodejs.org/en/download/
+  - Please make sure you have Node.js installed on your machine!
 
   # Technologies
   - JavaScript,ES6,Node

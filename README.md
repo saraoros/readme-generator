@@ -13,6 +13,7 @@
 
   # Description
   - The goal of this project is to create a README generator to help developers create a professional README for a new project.
+ ## Live Video Demonstration
 
   <img src="./develop/images/sampleREADME.png" />
 
