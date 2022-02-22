@@ -1,23 +1,32 @@
 
-  # Sara's Project
+  # fgdfg
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
+# Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Technologies](#technologies)
+- [Repository](#repository)
+- [Questions](#questions)
+- [License](#license)
+
   # Description
-  - I made this project
+  - gdfg
 
   # Installation
-  - Make sure to download Node.js onto your machine.
+  - dfgd
 
-  # Technologies Used
-  - JavaScript,ES6,Node
+  # Technologies
+  - JavaScript
 
 
-  # Link to Repository
-  - <a href="https://github.com/saraoros">Github Repository</a>
+  # Repository
+  - <a href="https://github.com/fgdf">Github Repository</a>
 
   # Questions
-  - saragochez13@gmail.com
+  - fgdf
 
   # License
-  ### undefined
+  Copyright (C) 2022 ${data.github} This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
   
