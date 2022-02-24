@@ -22,7 +22,7 @@
 <br />
 
 ### Screenshots of Sample Questions and Sample README
-  <img src="./develop/images/LiveDemoSampleRead.png">
+  <img src="./develop/images/LiveDemoSampleRead.png" />
 
   <br />
   
