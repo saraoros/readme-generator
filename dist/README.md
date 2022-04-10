@@ -1,5 +1,5 @@
 
-  # sara's awesome project
+  # gdfg
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Table of Contents
@@ -12,20 +12,20 @@
 - [License](#license)
 
   # Description
-  - I created this project for fun!
+  - fdgd
 
   # Installation
-  - Please make sure you have Node.js installed on your machine!
+  - dfgd
 
   # Technologies
-  - JavaScript,ES6,Node
+  - 
 
 
   # Repository
-  - <a href="https://github.com/saraoros">Github Repository</a>
+  - <a href="https://github.com/fgd">Github Repository</a>
 
   # Questions
-  - saragochez13@gmail.com
+  - gdf
 
   # License
   Copyright © 2022

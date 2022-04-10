@@ -56,7 +56,7 @@ Let's Get Started With a Few Questions:
             type: 'checkbox',
             name: 'languages',
             message: 'What languages did you use to build this project? (Check all that apply)',
-            choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node', 'Other']
+            choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node.js', 'Express.js', 'mySQL', 'Sequelize',  'Other']
           },
           {
             type: 'input',
