@@ -32,7 +32,9 @@
   - In order to use this README generator, please be sure to have Node.js installed on your machine. If it is not already installed, you can download Node.js through their webpage: https://nodejs.org/en/download/
 
   # Technologies
-  - JavaScript,ES6,Node
+  - JavaScript
+  - ES6
+  - Node.js
 
 
   # Repository
