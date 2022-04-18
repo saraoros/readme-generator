@@ -22,8 +22,6 @@
 <br />
 
 ### Screenshots of Sample Questions and Sample README
-  <img src="./develop/images/LiveDemoSampleRead.png" />
-
   <br />
   
   <img src="./develop/images/sampleREADME.png" />
