@@ -35,6 +35,7 @@
   - JavaScript
   - ES6
   - Node.js
+  - Inquirer.js
 
 
   # Repository
